@@ -44,3 +44,17 @@ else:
 print("\nreservas realizadas hasta el momento:")
 for r in reservas:
     print(r)
+
+# opción extra 
+opcion_historial = input("\ndeseas ver el historial completo de reservas (s/n): ")
+
+if opcion_historial.lower() == "s":
+    print("\n--- historial completo de reservas ---")
+    for i, r in enumerate(reservas):
+        print(f"\nreserva #{i + 1}")
+        print(f"cliente: {r['cliente']}")
+        print(f"película: {r['pelicula']}")
+        print(f"hora: {r['hora']}")
+        print(f"boletos: {r['boletos']}")
+        print(f"total: q{r['total']:.2f}")
+
